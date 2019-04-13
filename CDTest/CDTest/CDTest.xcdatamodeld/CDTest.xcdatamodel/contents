@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CustomObject" representedClassName="CustomObject" syncable="YES" codeGenerationType="class">
+        <attribute name="customID" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="secondObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SecondCustomObject" inverseName="customObject" inverseEntity="SecondCustomObject" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="customID"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="SecondCustomObject" representedClassName="SecondCustomObject" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondID" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CustomObject" inverseName="secondObject" inverseEntity="CustomObject" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="secondID"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CustomObject" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="SecondCustomObject" positionX="-63" positionY="0" width="128" height="90"/>
+    </elements>
+</model>
