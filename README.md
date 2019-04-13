@@ -1,5 +1,5 @@
 # CD-Test
-Sample core data project
+Sample core data project to reproduce a scenario that dupes a NSManagedObject without specifically creating a new one.
 
 
 To reproduce the issue, tap the button multiple times and you'll see that the number of objects increase even though no new object is created.
